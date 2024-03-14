@@ -17,7 +17,7 @@ fi
 
 #test for success case through maze using upper case WASD
 echo -n "Testing for succcess case through maze upper case - "
-./maze "validMaze.txt" < validPathThroughMazeWASD.txt > out
+./maze "validMaze.txt" < validPathThroughMazeUpper.txt > out
 if grep -q "Congratulations! You have won." out;
 then
     echo "Pass"
@@ -27,8 +27,7 @@ fi
 
 #test for success case through maze using lower case wasd
 echo -n "Testing for succcess case through maze lower case- "
-./maze "validMaze.txt" < validPathThroughMazewasd.txt > out
-
+./maze "validMaze.txt" < validPathThroughMazeLower.txt > out
 if grep -q "Congratulations! You have won." out;
 then
     echo "Pass"
