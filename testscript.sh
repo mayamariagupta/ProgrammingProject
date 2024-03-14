@@ -155,5 +155,16 @@ else
     cat out
 fi
 
+#test if m shows map
+echo -n "Testing for m showing map - "
+echo "m" | ./maze > out
+if grep -q "Here is the map." out;
+then
+    echo "Pass"
+else
+    echo "Fail"
+    cat out
+fi
+
 rm -f out
 rm -f maze
